@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript: Sample</title>
+</head>
+<body onload="populate()">
+  <script src="script.js"></script>
+  <div class="entry-content">
+	<div align=left>
+		Contact First Name (required) <input id="contactFirstName" name="contactFirstName" required="" type="text" onchange="Javascript:createXML();"/><br>
+		Contact Last Name (required)  <input id="contactLastName" required="" type="text" onchange="Javascript:createXML();" /><br>
+		Contact Phone (required)      <input id="phone" required="" type="text" onchange="Javascript:createXML();"/><br>
+		Contact Email (required) 	  <input id="email" required="" type="text" onchange="Javascript:createXML();"/><br>
+		Organization Name (required)  <input id="org" required="" type="text" onchange="Javascript:createXML();"/><br>
+		Organization's Address (required)  <input id="addr" required="" type="text" onchange="Javascript:createXML();"/><br>	
+		Parent First Name  <input id="parentFirstName" type="text" onchange="Javascript:createXML();"/><br>
+		Parent Last Name   <input id="parentLastName" type="text" onchange="Javascript:createXML();"/><br>
+		Select an Organization Type (required)
+	<select id="type" required="">
+		<option value="Agency">One</option>
+		<option value="Daycare">Two</option>
+		<option value="School">Three</option>
+	</select>
+	<br>		
+	<br>
+		Comments:
+	<br>	
+	<textarea id="comments" rows="4" cols="50" onchange="Javascript:createXML();"></textarea>
+	</div>
+	<br>  
+	<div>Select From The Following Items: </div>
+	<div>
+	<b>Age</b> <select id="AgeGroup" onchange="ageChanged();"></select>
+	
+	<b>Gender</b>    <select id="Gender"></select>
+
+	<b>Item</b>    <select id="Item" onchange="loadSizes();"></select>
+
+	<b>Size</b>      <select id="Size"></select>
+
+	<b>Quantity</b>   <select id="Qty"></select>
+
+	<button type="button" onclick="Javascript:addRow()">Add</button>
+	
+	</div>
+	<br />
+
+	<div>Your Order: </div>
+	<div>
+		<table id="orderDetails" border="1" cellpadding="2">
+			<tr>
+				<th>Item#</th>
+				<th>Age</th>
+				<th>Gender</th>
+				<th>Item Type</th>
+				<th>Size</th>
+				<th>Quantity</th>
+			</tr>
+		</table>
+	</div>
+	<br>		  
+	</div>
+	<input type="Submit" name="submit1" value="Submit">	
+	<textarea id="returnedXML" name="returnedXML" rows="10" cols="100" style="display:none;"></textarea>
+</body>
+</html>
